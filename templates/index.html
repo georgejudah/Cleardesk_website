@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearDesk - Secure Password Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>ClearDesk - Secure Password Management</h1>
+        <p>A secure and simple desktop password storage utility for everyday use.</p>
+        <a href="#download" class="btn">Download Now</a>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2>Key Features and Benefits</h2>
+            <div class="feature">
+                <h3>Secure Password Storage</h3>
+                <p>Your credentials are encrypted and stored securely on your local file system.</p>
+            </div>
+            <div class="feature">
+                <h3>Password Generator</h3>
+                <p>Generate highly secure passwords during sign-ups to protect your information from cyber threats.</p>
+            </div>
+            <div class="feature">
+                <h3>Two-Factor Authentication</h3>
+                <p>Enhance your security with two-factor authentication for accessing your stored passwords.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial">
+                <blockquote>
+                    "ClearDesk has simplified my life! It's so easy to use, and I feel confident knowing my passwords are safe."
+                </blockquote>
+                <p>- John Doe, Security Enthusiast</p>
+            </div>
+            <div class="testimonial">
+                <blockquote>
+                    "I love the password generator feature. It helps me create strong and unique passwords effortlessly."
+                </blockquote>
+                <p>- Jane Smith, IT Professional</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="download">
+        <div class="container">
+            <h2>Download ClearDesk</h2>
+            <p>Get started with secure password management today!</p>
+            <a href="{{ url_for('download_zip') }}" class="btn">Download Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 ClearDesk - Your Password Security Solution</p>
+        </div>
+    </footer>
+</body>
+</html>
