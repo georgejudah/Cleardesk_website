@@ -195,3 +195,182 @@ footer {
 footer p {
   font-size: 14px;
 }
+
+/* Contact section */
+#contact {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+#contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+#contact textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#contact button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Newsletter Signup Section */
+#newsletter {
+  background-color: #007bff;
+  padding: 60px 0;
+  text-align: center;
+  color: #fff;
+}
+
+#newsletter h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#newsletter p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+#newsletter form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#newsletter input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+#newsletter button[type="submit"] {
+  background-color: #fff;
+  color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px;
+}
+
+#newsletter button[type="submit"]:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Download App Versions Section */
+#download-versions {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#download-versions h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.download-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.download-link {
+  flex: 1;
+  margin: 10px;
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-link a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-link:hover {
+  background-color: #0056b3;
+}
+
+.download-link i {
+  margin-bottom: 10px;
+}
+
+/* Footer Section */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

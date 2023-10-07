@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClearDesk - Secure Password Management</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://kit.fontawesome.com/42fb8fe6b1.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header>
@@ -27,10 +29,6 @@
         <div class="container">
             <h2>Key Features and Benefits</h2>
             <div class="feature">
-                <h3>Secure Password Storage</h3>
-                <p>Your credentials are encrypted and stored securely on your local file system.</p>
-            </div>
-            <div class="feature">
                 <h3>Password Generator</h3>
                 <p>Generate highly secure passwords during sign-ups to protect your information from cyber threats.</p>
             </div>
@@ -40,36 +38,71 @@
             </div>
         </div>
     </section>
-
-    <section id="testimonials">
+<!-- Download App Versions Section -->
+<section id="download">
+    <div class="container">
+        <h2>Download ClearDesk for Your Platform</h2>
+        <div class="download-links">
+            <div class="download-link">
+                <a href="{{ url_for('download_zip') }}" class="btn">
+                    <i class="fa-brands fa-windows fa-2x"></i>
+                    <span>Download for Windows</span>
+                </a>
+            </div>
+            <div class="download-link">
+                <a href="{{ url_for('download_zip') }}" class="btn">
+                    <i class="fa-brands fa-apple fa-2x"></i>
+                    <span>Download for macOS</span>
+                </a>
+            </div>
+            <div class="download-link">
+                <a href="{{ url_for('download_zip') }}" class="btn">
+                    <i class="fab fa-linux fa-2x"></i>
+                    <span>Download for Linux</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="contact">
         <div class="container">
-            <h2>What Our Users Say</h2>
-            <div class="testimonial">
-                <blockquote>
-                    "ClearDesk has simplified my life! It's so easy to use, and I feel confident knowing my passwords are safe."
-                </blockquote>
-                <p>- John Doe, Security Enthusiast</p>
-            </div>
-            <div class="testimonial">
-                <blockquote>
-                    "I love the password generator feature. It helps me create strong and unique passwords effortlessly."
-                </blockquote>
-                <p>- Jane Smith, IT Professional</p>
-            </div>
+            <h2>Contact Us</h2>
+            <p>Have a question or feedback? Send us an email:</p>
+            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Send Email</button>
+            </form>
         </div>
     </section>
 
-    <section id="download">
+    <section id="newsletter">
         <div class="container">
-            <h2>Download ClearDesk</h2>
-            <p>Get started with secure password management today!</p>
-            <a href="{{ url_for('download_zip') }}" class="btn">Download Now</a>
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with the latest cybersecurity news and ClearDesk updates.</p>
+            <form action="subscribe.php" method="post">
+                <input type="email" name="email" id="newsletter-email" placeholder="Your Email" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
         </div>
     </section>
 
+    
+    <!-- Footer Section with Privacy Policy and Terms of Service Links -->
     <footer>
         <div class="container">
             <p>&copy; 2023 ClearDesk - Your Password Security Solution</p>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
         </div>
     </footer>
 </body>
