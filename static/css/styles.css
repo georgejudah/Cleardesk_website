@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Basic styling */
@@ -25,8 +24,26 @@ header {
   background-color: #007bff;
   color: #fff;
   padding: 10px 0;
-  -webkit-transition: background-color 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center the logo and nav */
   transition: background-color 0.3s;
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* Vertically center logo and text */
+}
+
+.logo img {
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  margin-right: 10px; /* Add spacing between logo and text */
+}
+
+.logo span {
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold;
 }
 
 nav ul {
@@ -43,7 +60,6 @@ nav a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
@@ -54,23 +70,47 @@ nav a:hover {
 /* Hero section */
 #hero {
   background-image: url("background-image.jpg");
-  /* Replace with your image path */
-  background-size: 100% auto;
-  /* Adjust background size to fit image dimensions */
+  background-size: cover;
+  background-position: center;
   text-align: center;
   padding: 100px 0;
   color: #fff;
-  -webkit-animation: fadeIn 2s ease;
-          animation: fadeIn 2s ease;
 }
 
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content img {
+  width: 100px; /* Adjust the logo width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Add a subtle text shadow */
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
 }
 
 @keyframes fadeIn {
@@ -81,99 +121,23 @@ nav a:hover {
     opacity: 1;
   }
 }
-
-#hero h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-#hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-  -webkit-animation: pulse 1.5s infinite;
-          animation: pulse 1.5s infinite;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
 /* Features section */
 #features {
   background-color: #fff;
   padding: 40px 0;
-  -webkit-animation: slideInLeft 1s ease;
-          animation: slideInLeft 1s ease;
-}
-
-@-webkit-keyframes slideInLeft {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
+  animation: slideInLeft 1s ease;
 }
 
 @keyframes slideInLeft {
   0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
-
 .feature {
   background-color: #f0f0f0;
   padding: 20px;
@@ -190,36 +154,19 @@ nav a:hover {
 #testimonials {
   background-color: #f0f0f0;
   padding: 40px 0;
-  -webkit-animation: slideInRight 1s ease;
-          animation: slideInRight 1s ease;
-}
-
-@-webkit-keyframes slideInRight {
-  0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
+  animation: slideInRight 1s ease;
 }
 
 @keyframes slideInRight {
   0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
-
 .testimonial {
   background-color: #fff;
   padding: 20px;
@@ -232,36 +179,19 @@ nav a:hover {
   background-color: #007bff;
   padding: 40px 0;
   text-align: center;
-  -webkit-animation: fadeInUp 1.5s ease;
-          animation: fadeInUp 1.5s ease;
-}
-
-@-webkit-keyframes fadeInUp {
-  0% {
-    -webkit-transform: translateY(20%);
-            transform: translateY(20%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
+  animation: fadeInUp 1.5s ease;
 }
 
 @keyframes fadeInUp {
   0% {
-    -webkit-transform: translateY(20%);
-            transform: translateY(20%);
+    transform: translateY(20%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
-
 #download h2,
 #download p {
   color: #fff;
@@ -306,8 +236,8 @@ footer p {
   margin-bottom: 10px;
 }
 
-#contact input[type="text"],
-#contact input[type="email"],
+#contact input[type=text],
+#contact input[type=email],
 #contact textarea {
   width: 100%;
   padding: 10px;
@@ -322,18 +252,17 @@ footer p {
   min-height: 100px;
 }
 
-#contact button[type="submit"] {
+#contact button[type=submit] {
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 
-#contact button[type="submit"]:hover {
+#contact button[type=submit]:hover {
   background-color: #0056b3;
 }
 
@@ -360,7 +289,7 @@ footer p {
   margin: 0 auto;
 }
 
-#newsletter input[type="email"] {
+#newsletter input[type=email] {
   width: 100%;
   padding: 10px;
   border: none;
@@ -369,19 +298,18 @@ footer p {
   font-size: 16px;
 }
 
-#newsletter button[type="submit"] {
+#newsletter button[type=submit] {
   background-color: #fff;
   color: #007bff;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
   font-size: 16px;
 }
 
-#newsletter button[type="submit"]:hover {
+#newsletter button[type=submit]:hover {
   background-color: #0056b3;
   color: #fff;
 }
@@ -399,20 +327,13 @@ footer p {
 }
 
 .download-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .download-link {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   margin: 10px;
   padding: 15px 30px;
   background-color: #007bff;
@@ -420,39 +341,20 @@ footer p {
   text-align: center;
   border-radius: 5px;
   font-size: 18px;
-  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .download-link a {
   color: #fff;
   text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .download-link:hover {
@@ -485,4 +387,88 @@ footer p {
 .footer-links a:hover {
   text-decoration: underline;
 }
-/*# sourceMappingURL=styles.css.map */
+
+/* Enhanced Styling for Scrolling Product Screenshots Section */
+#product-screenshots {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#product-screenshots h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#product-screenshots p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #777;
+}
+
+.screenshot-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.screenshot {
+  flex: 0 0 auto;
+  max-width: 30%; /* Adjust the maximum width for each screenshot */
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+}
+
+.screenshot img {
+  width: 250px; /* Adjust the desired width for your images */
+  height: 150px; /* Adjust the desired height for your images */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.screenshot-caption {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.screenshot:hover {
+  transform: scale(1.05);
+}
+
+.screenshot img:hover {
+  transform: scale(1.1);
+}
+
+/* Style for the availability message */
+.availability-message {
+  font-size: 14px;
+  color: #FF0000; /* Red color for emphasis */
+  margin-top: 5px; /* Adjust margin as needed */
+}
+
+/* Add the styles for the download for Windows button with a pulsating animation */
+.btn-windows {
+  position: relative;
+  overflow: hidden;
+  animation: pulsate 2s infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Rest of your SCSS styles here *//*# sourceMappingURL=styles.css.map */

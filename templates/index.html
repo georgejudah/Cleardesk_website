@@ -10,24 +10,69 @@
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="static/images/logo.png" alt="ClearDesk Logo">
+            <span>ClearDesk™</span>
+        </div>
         <nav>
             <ul>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#download">Download</a></li>
             </ul>
         </nav>
     </header>
-
     <section id="hero">
-        <h1>ClearDesk - Secure Password Management</h1>
-        <p>A secure and simple desktop password storage utility for everyday use.</p>
-        <a href="#download" class="btn">Download Now</a>
+        <div class="hero-content">
+            <img src="static/images/logo.png" alt="ClearDesk Logo">
+            <h1>ClearDesk - Secure Password Management</h1>
+            <p>A secure and simple desktop password storage utility for everyday use.</p>
+            <a href="#download" class="btn">Download Now</a>
+        </div>
     </section>
+    
+    <section id="product-screenshots">
+        <div class="container">
+            <h2>Explore our product</h2>
+            <p>Take a closer look at our application with these interactive screenshots:</p>
+            <div class="screenshot-container">
+                <div class="screenshot">
+                    <a href="/static/images/lock_screen.png" target="_blank">
+                        <img src="/static/images/lock_screen.png" alt="Screenshot 1">
+                        <div class="screenshot-caption">Multi Factor Authentication<br>Click to view the full image</div>
+                    </a>
+                </div>
+                <div class="screenshot">
+                    <a href="/static/images/main_page.png" target="_blank">
+                        <img src="/static/images/main_page.png" alt="Screenshot 2">
+                        <div class="screenshot-caption">Password Management<br>Click to view the full image</div>
+                    </a>
+                </div>
+                <div class="screenshot">
+                    <a href="/static/images/secret_scanner.png" target="_blank">
+                        <img src="/static/images/secret_scanner.png" alt="Screenshot 2">
+                        <div class="screenshot-caption">Secret Scanner<br>Click to view the full image</div>
+                    </a>
+                </div>
+                <!-- Add more screenshots as needed -->
+            </div>
+        </div>
+    </section>
+    
+    
+    
 
+    
     <section id="features">
         <div class="container">
             <h2>Key Features and Benefits</h2>
+            <div class="feature">
+                <h3>Secure Password Safe</h3>
+                <p>Securely store and manage your passwords with our password storage application.</p>
+            </div>
+            <div class="feature">
+                <h3>Secret Scanner</h3>
+                <p>Identify files which might contain sensitive information</p>
+            </div>
             <div class="feature">
                 <h3>Password Generator</h3>
                 <p>Generate highly secure passwords during sign-ups to protect your information from cyber threats.</p>
@@ -38,37 +83,44 @@
             </div>
         </div>
     </section>
-<!-- Download App Versions Section -->
-<section id="download">
-    <div class="container">
-        <h2>Download ClearDesk for Your Platform</h2>
-        <div class="download-links">
-            <div class="download-link">
-                <a href="{{ url_for('download_zip') }}" class="btn">
-                    <i class="fa-brands fa-windows fa-2x"></i>
-                    <span>Download for Windows</span>
-                </a>
-            </div>
-            <div class="download-link">
-                <a href="{{ url_for('download_zip') }}" class="btn">
-                    <i class="fa-brands fa-apple fa-2x"></i>
-                    <span>Download for macOS</span>
-                </a>
-            </div>
-            <div class="download-link">
-                <a href="{{ url_for('download_zip') }}" class="btn">
-                    <i class="fab fa-linux fa-2x"></i>
-                    <span>Download for Linux</span>
-                </a>
+
+    <!-- Download App Versions Section -->
+    <section id="download">
+        <div class="container">
+            <h2>Download ClearDesk for Your Platform</h2>
+            <div class="download-links">
+                <div class="download-link">
+                    <a href="{{ url_for('download_zip') }}" class="btn btn-windows">
+                        <i class="fa-brands fa-windows fa-2x"></i>
+                        <span>Download for Windows</span>
+                        <div class="download-animation">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <p class="availability-message">*In initial testing stage</p>
+                    </a>
+                </div>
+                <div class="download-link">
+                    <!-- <a href="{{ url_for('download_zip') }}" class="btn"> -->
+                        <i class="fa-brands fa-apple fa-2x"></i>
+                        <span>Download for macOS</span>
+                    <!-- </a> -->
+                </div>
+                <div class="download-link">
+                    <!-- <a href="{{ url_for('download_zip') }}" class="btn"> -->
+                        <i class="fab fa-linux fa-2x"></i>
+                        <span>Download for Linux</span>
+                    <!-- </a> -->
+                    <p class="availability-message">*Currently not available for Mac OS and Linux</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
     <section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
             <p>Have a question or feedback? Send us an email:</p>
-            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <form action="mailto:test-email@gmail.com" method="post" enctype="text/plain">
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
 

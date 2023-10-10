@@ -24,7 +24,26 @@ header {
   background-color: #007bff;
   color: #fff;
   padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center the logo and nav */
   transition: background-color 0.3s;
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* Vertically center logo and text */
+}
+
+.logo img {
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  margin-right: 10px; /* Add spacing between logo and text */
+}
+
+.logo span {
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold;
 }
 
 nav ul {
@@ -50,12 +69,48 @@ nav a:hover {
 
 /* Hero section */
 #hero {
-  background-image: url("background-image.jpg"); /* Replace with your image path */
-  background-size: 100% auto; /* Adjust background size to fit image dimensions */
+  background-image: url("background-image.jpg");
+  background-size: cover;
+  background-position: center;
   text-align: center;
   padding: 100px 0;
   color: #fff;
-  animation: fadeIn 2s ease;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content img {
+  width: 100px; /* Adjust the logo width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Add a subtle text shadow */
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
 }
 
 @keyframes fadeIn {
@@ -64,44 +119,6 @@ nav a:hover {
   }
   100% {
     opacity: 1;
-  }
-}
-
-#hero h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-#hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  animation: pulse 1.5s infinite;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 
@@ -374,3 +391,93 @@ footer p {
 .footer-links a:hover {
   text-decoration: underline;
 }
+
+/* Enhanced Styling for Scrolling Product Screenshots Section */
+#product-screenshots {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#product-screenshots h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#product-screenshots p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #777;
+}
+
+.screenshot-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.screenshot {
+  flex: 0 0 auto;
+  max-width: 30%; /* Adjust the maximum width for each screenshot */
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+}
+
+.screenshot img {
+  width: 250px; /* Adjust the desired width for your images */
+  height: 150px; /* Adjust the desired height for your images */
+  // object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.screenshot-caption {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.screenshot:hover {
+  transform: scale(1.05);
+}
+
+.screenshot img:hover {
+  transform: scale(1.1);
+}
+
+/* Style for the availability message */
+.availability-message {
+  font-size: 14px;
+  color: #FF0000; /* Red color for emphasis */
+  margin-top: 5px; /* Adjust margin as needed */
+}
+
+/* Add the styles for the download for Windows button with a pulsating animation */
+.btn-windows {
+  position: relative;
+  overflow: hidden;
+  animation: pulsate 2s infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Rest of your SCSS styles here */
+
+
+

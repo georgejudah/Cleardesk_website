@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+clear_desk-win32-x64.zip
 
 # C extensions
 *.so
